@@ -93,6 +93,8 @@ main {
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 .image {
@@ -101,31 +103,31 @@ main {
   height: auto;
 }
 
-.clean-sheet .image {
+.filter-grayscale .image {
   filter: grayscale(50%);
 }
 
-.dont-work .image {
+.filtersa-turate .image {
   filter: saturate(300%);
 }
 
-.ideal .image {
+.filter-sepia .image {
   filter: sepia(0.6);
 }
 
-.who-nearby .image {
+.filter-hue-rotate .image {
   filter: hue-rotate(0.5turn);
 }
 
-.strategies .image {
+.filter-invert .image {
   filter: invert(100%);
 }
 
-.hands-drop .image {
+.filter-blur-grayscale .image {
   filter: blur(3px) grayscale(80%);
 }
 
-.im-here .image {
+.filter-opacity .image {
   filter: opacity(40%);
 }
 
@@ -209,19 +211,17 @@ dialog[open] .dialog-content {
 }
 
 dialog::backdrop {
-  background-color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.card__like-button,
-.button__save,
+.button,
 .close-dialog {
   position: relative;
   display: inline-block;
   overflow: hidden;
 }
 
-.card__like-button span,
-.button__save span,
+.button span,
 .close-dialog span {
   position: relative;
   z-index: 1;
@@ -229,8 +229,7 @@ dialog::backdrop {
   mix-blend-mode: difference;
 }
 
-.card__like-button::before,
-.button__save::before,
+.button::before,
 .close-dialog::before {
   content: '';
   position: absolute;
@@ -245,8 +244,7 @@ dialog::backdrop {
   z-index: 0;
 }
 
-.card__like-button:hover::before,
-.button__save:hover::before,
+.button:hover::before,
 .close-dialog:hover::before {
   transform: scaleX(1);
 }
@@ -295,17 +293,17 @@ dialog::backdrop {
 
 .like-icon:hover .core{
   fill: var(--accent-color);
-  transition: fill 0.3s linear 0.03s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:active .core{
   fill: var(--animation-fill-color);
-  transition: fill 0.3s linear 0.03s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s linear 0.03s;
+  transition: fill 0.3s linear;
 }
 
 .main-body {
@@ -330,6 +328,7 @@ dialog::backdrop {
 
 @supports (-webkit-text-stroke: 1px #FFFFFF) {
   .image label {
+    text-shadow: none;
     -webkit-text-stroke: 1px #FFFFFF;
   }
 }
