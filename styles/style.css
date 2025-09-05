@@ -28,6 +28,12 @@
   padding: 122px 16px;
 }
 
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .header__title {
   font-variation-settings: "wght" var(--weight-litle-title);
 }
@@ -36,6 +42,7 @@
 .header__text {
   margin: 0;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .header__text, 
@@ -62,8 +69,6 @@ main {
 .card {
   font-size: var(--size-card-text);
   margin-bottom: 52px;
-  max-width: 100%;
-  width: 100%;
 }
 
 .card:last-child {
@@ -72,6 +77,7 @@ main {
 
 .card__title {
   font-variation-settings: "wght" var(--weight-card-title);
+  font-size: var(--size-card-text);
   padding: 4px 10px;
 }
 
@@ -101,13 +107,14 @@ main {
   position: relative;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .filter-grayscale .image {
   filter: grayscale(50%);
 }
 
-.filtersa-turate .image {
+.filter-saturate .image {
   filter: saturate(300%);
 }
 
@@ -151,6 +158,17 @@ main {
     0 -1px 0 #FFFFFF;
 }
 
+.card__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover; 
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  min-width: 100%;
+}
+
 .card__image,
 .card__like-button,
 dialog {
@@ -167,9 +185,13 @@ dialog {
   margin: 0 25px 25px 0;
 }
 
-.card__icon-button,
-.card__like-button {
+.button {
   cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px #000000;
 }
 
 .card__icon-button {
@@ -183,7 +205,7 @@ dialog {
 
 .button__container,
 .button__save {
-  display: flex;
+  display: flex  !important;
   justify-content: center;
 }
 
@@ -194,6 +216,11 @@ dialog {
   gap: 8px;
   padding: 17px 20px;
   margin-bottom: 100px;
+}
+
+.floppy-icon {
+  color: #FFFFFF;
+  mix-blend-mode: difference;
 }
 
 dialog {
@@ -333,8 +360,43 @@ dialog::backdrop {
   }
 }
 
-@media (width > 1024) {
+@media (min-width: 1440px) {
+  :root {
+    --size-title-header: 65px;
+    --size-text-header: 23px;
+    --items-width: 700px;
+  }
+
   .header {
     padding: 130px 122.5px;
+    font-variation-settings: "wght" var(--weight-litle-title);
+    margin-bottom: 98px;
+  }
+
+  .header__title {
+    font-size: var(--size-title-header);
+  }
+
+  .header__text {
+    font-size: var(--size-text-header);
+  }
+
+  .card {
+    margin-bottom: 50px;
+    
+  }
+
+  .card__title {
+    padding: 6px 12px;
+  }
+
+  .button__container,
+  .button__save {
+    display: flex;
+  }
+
+  .button__save {
+    flex-direction: row;
+    padding: 20.5px 20px;
   }
 }
