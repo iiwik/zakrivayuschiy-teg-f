@@ -238,26 +238,23 @@ dialog[open] .dialog-content {
 }
 
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
-.button,
-.close-dialog {
+.button {
   position: relative;
   display: inline-block;
   overflow: hidden;
 }
 
-.button span,
-.close-dialog span {
+.button span {
   position: relative;
   z-index: 1;
   color: #FFFFFF;
   mix-blend-mode: difference;
 }
 
-.button::before,
-.close-dialog::before {
+.button::before {
   content: '';
   position: absolute;
   top: 0;
