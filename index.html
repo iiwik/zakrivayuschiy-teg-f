@@ -29,7 +29,7 @@
         </div>
         <div class="card-paragraf">
           <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
-          <p class="card__text">Место для ваших воспоминаний о начале первого спринта.</p>
+          <p class="card__text">Место для ваших воспоминаний о начале обучения.</p>
         </div>
         <div class="bottom__button">
           <button class="card__icon-button" type="button">
@@ -238,7 +238,7 @@
       </div>
 
       <div class="button__container">
-        <button class="button button__save" type="button">
+        <button class="button button__save" type="button" onclick="openDialog()">
           <svg class ="floppy-icon" width="29" height="28" fill="none">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
@@ -246,18 +246,22 @@
         </button>
       </div>
 
-      <dialog id="save-dialog">
+      <dialog id="save_dialog">
         <div class="dialog-content">
           <svg width="29" height="28" fill="none">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
           <p>Вставьте дискету, чтобы продолжить</p>
         </div>
-        <button class="button" id="close-dialog" type="button">
+        <button class="button" 
+                id="close-dialog" 
+                type="button"
+                onclick="handleCancel()">
           <span class="button button__text">OK</span>
         </button>
       </dialog>
     </main>
     <script src="./scripts/like.js"></script>
+    <script src="./scripts/save.js"></script>
   </body>
 </html>
