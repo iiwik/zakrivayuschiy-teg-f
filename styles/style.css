@@ -477,6 +477,5 @@ dialog::backdrop {
 
   dialog[open] .dialog-content {
   gap: 30px;
-}
-
+  }
 }
