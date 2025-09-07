@@ -340,9 +340,9 @@ dialog::backdrop {
 }
 
 .button, dialog {
-    border-width: 2px 2px;
-    border-style: solid;
-    border-color: #000;
+  border-width: 2px 2px;
+  border-style: solid;
+  border-color: #000;
 }
 
 .like-icon {
