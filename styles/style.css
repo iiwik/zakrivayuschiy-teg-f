@@ -31,7 +31,7 @@
 .logo {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 17px;
 }
 
 .header__title {
@@ -81,6 +81,7 @@ main {
 .card__text {
   font-variation-settings: "wght" var(--weight-card-text);
   margin-bottom: 25px;
+  line-height: 21px;
 }
 
 .card__text:last-child{
@@ -197,13 +198,13 @@ dialog {
 }
 
 .card__like-button {
-  padding: 12.5px 31px;
-  width: 118px;
+  padding: 0 37px;
+  width: 130px;
   height: 38px;
 }
 
 .card__like-button .button__text {
-  width: 56px;
+  /* width: 56px; */
   height: 13px;
 }
 
@@ -388,12 +389,12 @@ dialog::backdrop {
   }
 
   .card {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
     
   }
 
   .card__title {
-    padding: 6px 12px;
+    padding: 4px 10px;
   }
 
   .button__container,
