@@ -89,7 +89,7 @@ main {
 }
 
 .card-paragraf {
-  padding: 25px;
+  padding: 26px;
   width: 100%;
 }
 
@@ -237,12 +237,11 @@ dialog {
 .floppy-icon {
   color: #FFFFFF;
   mix-blend-mode: difference;
-  height: 28px;
+  height: 21px;
 }
 
 dialog {
-  /* display: none; */
-  padding: 30px 40px;
+  padding: 30px;
   font-family: var(--font-accent);
   width: clamp(341px, 50%, 353px);
   position: fixed;
@@ -252,12 +251,37 @@ dialog {
   margin: 0;
 }
 
-
-dialog[open] .dialog-content {
+dialog[open] .save_dialog {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 30px;
+}
+
+dialog[open] .dialog-content {
+  display: inline;
+  display: grid;
+  grid-template-columns: 39px auto;
+  gap: 20px;
+}
+
+.dialog-content svg {
+    width: 39px;
+    height: 39px;
+}
+
+.dialog-content p {
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
+.save_dialog .button__ok {
+  width: 100%;
+  margin-top: 30px;
+  height: 38px;
+}
+
+dialog[open] .floppy-icon {
+  height: 39px;
 }
 
 dialog::backdrop {
@@ -318,15 +342,12 @@ dialog::backdrop {
     border-color: #000;
 }
 
-
 .like-icon {
   transform-origin: center;
   padding: 0;
   margin: 0;
   height: 34px;
 }
-
-
 
 .like-icon.is-liked .card__icon-button {
   animation: heart_pop 0.3s ease-in 0.1s forwards;
@@ -434,7 +455,7 @@ dialog::backdrop {
 
   .button__save {
     flex-direction: row;
-    padding: 17px 20px;
+    padding: 17px 14px;
     gap: 8px;
     height: 55px;
   }
