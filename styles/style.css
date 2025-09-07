@@ -46,22 +46,19 @@
 }
 
 .header__text, 
-.card__like-button,
-.button__save {
+.button {
   font-size: var(--size-little-text);
   font-family: var(--font-accent);
   font-variation-settings: "wght" var(--weight-litle-title);
 }
 
 main {
-  background-color: #FFFFFF;
   font-family: var(--font-main);
 }
 
 .card, 
 .header,
-.card__like-button,
-.button__save {
+.button {
   background-color: #FFFFFF;
   border: 2px solid #000000;
 }
@@ -170,7 +167,7 @@ main {
 }
 
 .card__image,
-.card__like-button,
+.button,
 dialog {
   border-width: 2px 2px; 
   border-style: solid; 
@@ -200,7 +197,14 @@ dialog {
 }
 
 .card__like-button {
-  padding: 12.5px 37px;
+  padding: 12.5px 31px;
+  width: 118px;
+  height: 38px;
+}
+
+.card__like-button .button__text {
+  width: 56px;
+  height: 13px;
 }
 
 .button__container,
@@ -268,29 +272,34 @@ dialog::backdrop {
   z-index: 0;
 }
 
-.button:hover::before,
-.close-dialog:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
 .card__icon-button {
-  padding: 7px 5.5px;
+  display: flex; 
+  align-items: center;
   border: 2px solid transparent;
   cursor: pointer;
   outline: none;
   transition: border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .card__icon-button:focus-visible {
   border-color: #000000;
+  border-width: 2px;
 }
 
 .like-icon {
-  transform-origin: center
+  transform-origin: center;
+  padding: 0;
 }
 
 .like-icon.is-liked .card__icon-button {
   animation: heart_pop 0.3s ease-in 0.1s forwards;
+  width: 130px;
+  height: 38px;
 }
 
 .sparks {
